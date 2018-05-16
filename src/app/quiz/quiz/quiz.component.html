@@ -1,0 +1,63 @@
+<div style="margin-top: 40px">
+    <!-- <div class="container" style="margin-left: 545px">{{time}}</div> -->
+    <div class="col-sm-4 float-right">
+        <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+            <mat-button-toggle value="bold">Richard</mat-button-toggle>
+            <mat-button-toggle value="italic"> <span matBadge="4" matBadgeOverlap="false"  matBadgeColor="accent">Score</span></mat-button-toggle>
+            <mat-button-toggle value="underline">Provisoire</mat-button-toggle>
+        </mat-button-toggle-group>
+    </div>
+    <div>
+        <button mat-button (click)="addQuiz()">Add Test</button>
+    </div>
+    
+    <div class="container mt-5">
+        <mat-card class="example-card">
+
+            <mat-card-content>
+                <p>
+                    The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+                    A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+                    bred for hunting.
+                </p>
+            </mat-card-content>
+
+            <!--sub question-->
+            <mat-card class="example-card">
+
+                <mat-card-content matBadge="A" matBadgePosition="before" matBadgeColor="accent">
+                    <p>
+                        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+                        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+                        bred for hunting.
+                    </p>
+                </mat-card-content>
+            </mat-card>
+
+            <mat-card class="example-card mt-1">
+
+                <mat-card-content matBadge="B" matBadgePosition="before" matBadgeColor="accent">
+                    <p>
+                        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+                        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+                        bred for hunting.
+                    </p>
+                </mat-card-content>
+            </mat-card>
+            <!--end sub question-->
+
+            <mat-card-actions class="ml-1">
+                <!--<button mat-button>Nibyo</button>-->
+                <!--<button mat-button>Sibyo</button>-->
+                <mat-button-toggle-group [disabled]="true" name="fontStyle" aria-label="Font Style">
+                    <mat-button-toggle value="bold">A</mat-button-toggle>
+                    <mat-button-toggle value="italic">B</mat-button-toggle>
+                    <mat-button-toggle value="underline">C</mat-button-toggle>
+                </mat-button-toggle-group>
+            </mat-card-actions>
+
+
+        </mat-card>
+    </div>
+    
+</div>

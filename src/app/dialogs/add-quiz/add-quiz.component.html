@@ -1,0 +1,47 @@
+<div class="row w-100">
+  <div class="mw-100">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Question</label>
+      <textarea  [(ngModel)]="question.question"  type="email" class="form-control"  aria-describedby="emailHelp" placeholder="Enter email"></textarea>
+      <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+    </div>
+    <div class="form-group">
+      <label>Answer A</label>
+
+      <mat-grid-list cols="2" rowHeight="2:1">
+        <mat-grid-tile><input [(ngModel)]="question.choice_a"  class="form-control" placeholder="Answer A"></mat-grid-tile>
+        <mat-grid-tile>
+            <mat-checkbox (click)="is_option('a')"></mat-checkbox>
+        </mat-grid-tile>
+      
+      </mat-grid-list>
+
+      
+    </div>
+    <div class="form-group">
+      <label >Answer B</label>
+      <mat-grid-list cols="2" rowHeight="2:1">
+        <mat-grid-tile><input [(ngModel)]="question.choice_b"  class="form-control" placeholder="Answer B"></mat-grid-tile>
+        <mat-grid-tile>
+          <mat-checkbox (click)="is_option('b')"></mat-checkbox>
+        </mat-grid-tile>
+      
+      </mat-grid-list>
+    </div>
+    <div class="form-group">
+      <label>Answer C</label>
+      <mat-grid-list cols="2" rowHeight="2:1">
+        <mat-grid-tile><input [(ngModel)]="question.choice_c"  class="form-control" placeholder="Answer C"></mat-grid-tile>
+        <mat-grid-tile>
+          <mat-checkbox (click)="is_option('c')"></mat-checkbox>
+        </mat-grid-tile>
+      
+      </mat-grid-list>
+    </div>
+    <div class="form-check">
+      <!-- <input type="checkbox" class="form-check-input" id="exampleCheck1"> -->
+      <!-- <label class="form-check-label" for="exampleCheck1">Check me out</label> -->
+    </div>
+    <button type="submit" class="btn btn-primary ml-5" (click)="saveQuiz()">Save</button>
+  </div>
+</div>
