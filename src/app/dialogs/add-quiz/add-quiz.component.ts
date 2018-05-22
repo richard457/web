@@ -9,7 +9,7 @@ import { Quiz } from '../../contracts/quiz.class';
 })
 export class AddQuizComponent implements OnInit {
 
-  question:Quiz;
+  question: Quiz;
   constructor( private real_time_db: AngularFireDatabase) {
     this.question = new Quiz();
    }
@@ -17,12 +17,10 @@ export class AddQuizComponent implements OnInit {
   ngOnInit() {
 
   }
-  is_option(answer){
+  is_option(answer) {
     this.question.answers.push(answer);
   }
-  saveQuiz(){
-   
-  
+  saveQuiz() {
     this.real_time_db.database.ref('quizes').push(this.question);
   }
 

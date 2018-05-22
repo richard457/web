@@ -25,10 +25,12 @@ export const firebaseConfig = {
         MatFormFieldModule,
         MatSelectModule,
         ReactiveFormsModule,
+        AngularFireDatabaseModule,
         AngularFireModule.initializeApp(firebaseConfig),
+        // AngularFireModule.initializeApp(firebaseConfig),
         AngularFirestoreModule,
         AngularFireModule.initializeApp(firebaseConfig, 'quiz'),
-        AngularFireDatabaseModule
+        // AngularFireDatabaseModule
     ],
     declarations: [LoginComponent],
 

@@ -12,24 +12,22 @@
     </div>
     
     <div class="container mt-5">
-        <mat-card class="example-card">
+        <mat-card class="example-card" *ngFor="let quiz of quizes | async; let i = index">
 
             <mat-card-content>
-                <p>
-                    The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-                    A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-                    bred for hunting.
-                </p>
-            </mat-card-content>
+                <mat-card-content matBadge="Q.{{i}}" matBadgePosition="before" matBadgeColor="accent" (click)="mark(quiz)">
+                    <p class="ml-5">
+                        {{quiz.question}}
+                    </p>
+                </mat-card-content>
 
+            </mat-card-content>
             <!--sub question-->
             <mat-card class="example-card">
 
                 <mat-card-content matBadge="A" matBadgePosition="before" matBadgeColor="accent">
-                    <p>
-                        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-                        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-                        bred for hunting.
+                    <p class="ml-5">
+                        {{quiz.choice_a}}
                     </p>
                 </mat-card-content>
             </mat-card>
@@ -37,24 +35,22 @@
             <mat-card class="example-card mt-1">
 
                 <mat-card-content matBadge="B" matBadgePosition="before" matBadgeColor="accent">
-                    <p>
-                        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-                        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-                        bred for hunting.
+                    <p class="ml-5">
+                        {{quiz.choice_b}}
                     </p>
                 </mat-card-content>
             </mat-card>
+
             <!--end sub question-->
 
-            <mat-card-actions class="ml-1">
-                <!--<button mat-button>Nibyo</button>-->
-                <!--<button mat-button>Sibyo</button>-->
-                <mat-button-toggle-group [disabled]="true" name="fontStyle" aria-label="Font Style">
-                    <mat-button-toggle value="bold">A</mat-button-toggle>
-                    <mat-button-toggle value="italic">B</mat-button-toggle>
-                    <mat-button-toggle value="underline">C</mat-button-toggle>
-                </mat-button-toggle-group>
-            </mat-card-actions>
+            <!--<mat-card-actions class="ml-1">-->
+               <!---->
+                <!--<mat-button-toggle-group [disabled]="true" name="fontStyle" aria-label="Font Style">-->
+                    <!--<mat-button-toggle value="bold">A</mat-button-toggle>-->
+                    <!--<mat-button-toggle value="italic">B</mat-button-toggle>-->
+                    <!--<mat-button-toggle value="underline">C</mat-button-toggle>-->
+                <!--</mat-button-toggle-group>-->
+            <!--</mat-card-actions>-->
 
 
         </mat-card>
